@@ -1,0 +1,10 @@
+config:
+ server_name: server2
+ ipaddress: x.x.x.x
+ password: better
+ username: root
+ port: 8899
+ folder_array: " /app/pgserver2,/app/server2hq,/app/server2ntracker,/backup/mysqlbackup,/backup/pgsql_backup"
+ backup_path: '/data/current_backups/server2hq'
+ exclude_array: "log/*,*bak,.log"
+ schedule: "daily"
