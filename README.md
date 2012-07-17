@@ -17,15 +17,15 @@
 
 *	sidekiq test daemon : 
 
-		-- sidekiq -r ./run.rb -C 2 -p log/sidekiq.pid -q default > log/sidekiq.log &
+	 -- sidekiq -r ./run.rb -C 2 -p log/sidekiq.pid -q default > log/sidekiq.log &
 
-		-- to test WorKer with sidekiq standalone irb : irb -r ./run.rb 
+	 -- to test WorKer with sidekiq standalone irb : irb -r ./run.rb 
 
-        	- rake kick # task for starting sidekiq daemon
+         -- rake kick # task for starting sidekiq daemon
 
-*	 clockwork scheduler generator :
+*	clockwork scheduler generator :
 
-*		- rake gen_clock 
+*	 -- rake gen_clock 
 
-*	 clockwork : clockwork clock.rb >log/clockwork.log &
+*	clockwork : clockwork clock.rb >log/clockwork.log &
 
