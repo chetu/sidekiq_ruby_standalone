@@ -20,7 +20,12 @@ task :default  => [:hi]
      yml_process
   end
  
-  desc "restart sidekiq daemon"
+  desc "start sidekiq daemon"
   task :kick do
-    `sidekiq -r ./run.rb -C 2 -p log/sidekiq.pid -q default > log/sidekiq.log &`
+    ` sidekiq -r ./run.rb -C 2 -p log/sidekiq.pid -q default > log/sidekiq.log &`
   end
+  desc "start clockwork daemon"  
+  task :start_clock do
+   `clockwork clock.rb >log/clockwork.log &`
+  end
+
