@@ -1,8 +1,8 @@
-# Rsync based data backup script program using ruby 
-#
-# A pure safe backup program  
-# rsync is incremental backup tools having variety of options like high rate compression, excludes, includes etc
-# @chetanMM
+ Rsync based data backup script program using ruby 
+
+ A pure safe backup program  
+ rsync is incremental backup tools having variety of options like high rate compression, excludes, includes etc
+ @chetanMM
 
 == lib/rsync.rb: program for mail-config, read-config, compression-command, rsync-command 
 
