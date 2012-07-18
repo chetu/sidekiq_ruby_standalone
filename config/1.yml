@@ -1,10 +1,10 @@
 config:
- server_name: server1 
+ server_name: test1 
  ipaddress: x.x.x.x
  password: better
  username: root
  port: 8899
- folder_array: "/app/server1,/backup/mysqlback,/etc/httpd"
- backup_path: '/data/current_backups/server1'
+ folder_array: "/app/test1:daily|hourly,/backup/mysqlback,/etc/httpd"
+ backup_path: '/data/current_backups/test1'
  exclude_array: "log/*,*bak,.log"
  schedule: "daily,hourly"
