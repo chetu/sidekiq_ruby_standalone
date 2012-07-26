@@ -1,0 +1,11 @@
+config:
+ server_name: test2
+ ipaddress: 111.222.111.221
+ password: better
+ username: root
+ port: 22
+ folder_array: "/data/ron, /data/we,/data/domains,/data/creeee,/backup/mysqlbackup,/etc/httpd"
+ backup_path: '/data/current_backups/test2'
+ exclude_array: "log/*,*bak,.log"
+ rsync_schedule: "hourly|**:20,daily"
+ archive_schedule: "daily|02:35"

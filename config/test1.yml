@@ -1,0 +1,13 @@
+config:
+ server_name: test1 
+ ipaddress: 111.111.222.221
+ password: better
+ username: root
+ port: 22
+ folder_array: "/app/test1,/backup/mysqlback,/etc/httpd"
+ backup_path: '/data/current_backups/test1'
+ exclude_array: "log/*,*bak,.log"
+ rsync_schedule: "hourly"
+ archive_schedule: "daily"
+
+

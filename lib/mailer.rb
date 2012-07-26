@@ -3,21 +3,21 @@ class Mailer < Rsync
     def send_email(subject,email,body)
       Mail.defaults do
         delivery_method :smtp,
-        :address  => "mailer.mailgrid.com",
-        :port  => 25,
-        :domain  => "mailer.mailgrid.com",
-        :user_name  => "username",
-        :password  => "password",
+        :address  => "mailer.emailifiedhq.com",
+        :port  => 6610,
+        :domain  => "mailer.emailifiedhq.com",
+        :user_name  => "capture",
+        :password  => "betaca2011zakas",
         :authentication  => :login
       end
 
       mail = Mail.new do
-       from "BACKUPADMIN@xyz.net"
+       from "BACKUPADMIN@betterlabs.net"
        to email
        subject "#{subject}"
        body " \n #{body}"
       end
-     mail.cc ["admin@xyz.net","hash#45@mgmail.com"]
+     mail.cc ["chetan.muneshwar@betterlabs.net","chetan.muneshwar@gmail.com"]
      mail.deliver
     end
 end

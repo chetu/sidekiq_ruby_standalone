@@ -22,10 +22,13 @@ task :default  => [:hi]
  
   desc "start sidekiq daemon"
   task :kick do
-    ` sidekiq -r ./run.rb -C 2 -p log/sidekiq.pid -q default > log/sidekiq.log &`
+    ` sidekiq -r ./run.rb -C 2 -p log/sidekiq.pid -q default >log/sidekiq.log &`
   end
   desc "start clockwork daemon"  
   task :start_clock do
    `clockwork clock.rb >log/clockwork.log &`
   end
-
+  desc "restart all"
+  task :kickstart do
+   `pii side |xargs kill -9 && pii clock |xargs kill -9 && redis-cli -p 7878 flushall && rake gen_clock && rake kick && rake start_clock` 
+  end 

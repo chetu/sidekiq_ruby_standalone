@@ -1,0 +1,12 @@
+config:
+ server_name: test3
+ ipaddress: 111.222.34.45
+ password: better
+ username: root
+ port: 22
+ folder_array: "/app/pgtest3,/app/test3hq,/app/test3ntracker,/backup/mysqlbackup,/backup/pgsql_backup,/etc/httpd,/etc/postfix,/var/lib/pgsql/9.1/data"
+ backup_path: '/data/current_backups/test3hq'
+ exclude_array: "*bak"
+ rsync_schedule: "hourly|**:10"
+ archive_schedule: "daily|04:00"
+
